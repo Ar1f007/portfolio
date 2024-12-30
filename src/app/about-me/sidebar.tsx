@@ -18,11 +18,11 @@ const Sidebar: FC<AboutStateProps> = ({
   toggleSelectedSection,
 }) => {
   return (
-    <aside className="basis-full lg:basis-[310px] border-r h-full">
+    <aside className="lg:w-[370px] border-r">
       <div className="border-b p-4">
         <button
           onClick={() => toggleSection('personalInfo')}
-          className="flex items-center w-full hover:text-foreground"
+          className="flex items-center w-full hover:text-[#fea55f]"
         >
           {openSections.personalInfo ? (
             <ChevronDown className="!size-5" />
@@ -35,8 +35,8 @@ const Sidebar: FC<AboutStateProps> = ({
           <div className="ml-6 mt-4 lg:mt-2 space-y-2">
             <button
               className={cn(
-                'block text-muted hover:text-foreground w-full text-left',
-                { 'text-foreground': selectedSection == 'bio' },
+                'block text-primary hover:text-[#fea55f] w-full text-left',
+                { 'text-[#fea55f]': selectedSection == 'bio' },
               )}
               onClick={() => toggleSelectedSection('bio')}
             >
@@ -44,8 +44,8 @@ const Sidebar: FC<AboutStateProps> = ({
             </button>
             <button
               className={cn(
-                'block text-muted hover:text-foreground w-full text-left',
-                { 'text-foreground': selectedSection == 'education' },
+                'block text-primary hover:text-[#fea55f] w-full text-left',
+                { 'text-[#fea55f]': selectedSection == 'education' },
               )}
               onClick={() => toggleSelectedSection('education')}
             >
@@ -58,7 +58,7 @@ const Sidebar: FC<AboutStateProps> = ({
       <div className="border-b p-4">
         <button
           onClick={() => toggleSection('skills')}
-          className="flex items-center w-full hover:text-foreground"
+          className="flex items-center w-full hover:text-[#fea55f]"
         >
           {openSections.skills ? (
             <ChevronDown className="!size-5" />
@@ -71,8 +71,8 @@ const Sidebar: FC<AboutStateProps> = ({
           <div className="ml-6 mt-4 lg:mt-2 space-y-2">
             <button
               className={cn(
-                'block text-muted hover:text-foreground w-full text-left',
-                { 'text-foreground': selectedSection == 'technologies' },
+                'block text-primary hover:text-[#fea55f] w-full text-left',
+                { 'text-[#fea55f]': selectedSection == 'technologies' },
               )}
               onClick={() => toggleSelectedSection('technologies')}
             >
@@ -85,7 +85,7 @@ const Sidebar: FC<AboutStateProps> = ({
       <div className="border-b p-4">
         <button
           onClick={() => toggleSection('contacts')}
-          className="flex items-center w-full hover:text-foreground"
+          className="flex items-center w-full hover:text-[#fea55f]"
         >
           {openSections.contacts ? (
             <ChevronDown className="!size-5" />
@@ -98,14 +98,14 @@ const Sidebar: FC<AboutStateProps> = ({
           <div className="ml-6 mt-4 lg:mt-2 space-y-2">
             <a
               href="mailto:ah.ariful.hoque@gmail.com"
-              className="flex items-center gap-2 text-muted hover:text-foreground"
+              className="flex items-center gap-2 text-primary hover:text-[#fea55f]"
             >
               <Mail size={16} />
               <span className="text-sm">ah.ariful.hoque@gmail.com</span>
             </a>
             <a
               href="tel:+8801633746005"
-              className="flex items-center gap-2 text-muted hover:text-foreground"
+              className="flex items-center gap-2 text-primary hover:text-[#fea55f]"
             >
               <Phone size={16} />
               <span className="text-sm">+880 1633746005</span>

@@ -75,6 +75,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			height: {
+				"content": "var(--content-h)",
 				"header-height": "var(--header-height)",
 				"footer-height": "var(--footer-height)",
 			},

@@ -33,7 +33,7 @@ export const ProjectStackSidebar: FC<ProjectStackSidebarProps> = ({ clearStacks,
 
 
   return (
-    <aside className="basis-full md:w-[180px] md:max-w-[180px] lg:w-[310px] lg:max-w-[310px] border-r sticky top-0 h-full bg-background">
+    <aside className="w-full lg:w-[370px] border-r sticky top-0 z-10 shadow-xl lg:shadow-none backdrop-blur-xl">
       <button
         onClick={toggleShowList}
         className="flex items-center w-full hover:text-foreground p-4 border-b h-14"
@@ -48,7 +48,7 @@ export const ProjectStackSidebar: FC<ProjectStackSidebarProps> = ({ clearStacks,
 
       <ScrollArea className={cn("md:max-h-none md:sidebar-h",
         {
-          "border-b shadow-xl lg:shadow-none lg:border-none h-[200px] w-full": showList
+          "border-b lg:border-none h-[200px] w-full": showList
         }
       )}>
         {showList && (

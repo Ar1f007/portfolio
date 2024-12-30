@@ -5,7 +5,7 @@ import { routes } from "~/lib/routes";
 
 export default function Home() {
   return (
-    <section className="p-4 grid grid-cols-6 relative body-h">
+    <section className="p-4 grid grid-cols-6 relative content-h">
 
       {/* Placeholder */}
       <div className="hidden lg:block md:col-span-1" />
@@ -30,7 +30,7 @@ export default function Home() {
               </p>
             </div>
             <h2 className="flex flex-col gap-1 md:mt-12 text-sm md:text-lg">
-              <span className="text-muted">&#47;&#47; find my profile on Github:</span>
+              <span className="text-gray-500 dark:text-muted">&#47;&#47; find my profile on Github:</span>
               <span className="flex flex-wrap gap-x-1">
                 <span className="text-[#4d5bce]">const</span>
                 <span className="text-[var(--teal-light)]">GITHUB_LINK</span>

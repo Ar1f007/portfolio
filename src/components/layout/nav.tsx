@@ -14,8 +14,8 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const pathname = usePathname();
 
-  const linkClasses = "border-l px-8 flex items-center h-full text-lg text-muted hover:text-foreground";
-  const mobileLinkClasses = "text-xl flex justify-center text-muted hover:text-foreground";
+  const linkClasses = "border-l px-8 flex items-center h-full text-lg text-primary hover:text-foreground";
+  const mobileLinkClasses = "text-xl flex justify-center text-primary hover:text-foreground";
 
   const isActive = (path: string) => pathname == path;
 

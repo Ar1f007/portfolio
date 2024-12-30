@@ -16,12 +16,12 @@ export const Projects: FC<ProjectsProps> = (props) => {
   const { projects, stacks, handleClearStack } = props;
 
   return (
-    <section className="w-full relative z-10 bg-background body-h">
-      <ul className="flex items-center gap-2 p-4 border-b text-muted min-h-14 lg:max-h-14 flex-wrap sticky top-0 z-20 bg-background">
+    <section className="w-full relative z-10 content-h overflow-y-auto">
+      <ul className="flex items-center gap-2 p-4 border-b text-muted min-h-14 lg:max-h-14 flex-wrap sticky top-0 z-20 backdrop-blur-xl">
         {
           stacks.map(s => (
             <li key={s}>
-              <span className="text-xs lg:text-lg">{s};</span>
+              <span className="text-xs lg:text-lg text-muted">{s};</span>
             </li>
           ))
         }

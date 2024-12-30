@@ -6,7 +6,7 @@ import { ContactPageSidebar } from "./sidebar"
 const ContactPage = () => {
 
   return (
-    <div className="flex flex-col lg:flex-row size-full">
+    <div className="flex flex-col lg:flex-row size-full content-h">
       <ContactPageSidebar />
       <ContactForm />
     </div>

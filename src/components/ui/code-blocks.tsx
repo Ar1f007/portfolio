@@ -1,7 +1,4 @@
-import { atelierLakesideDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-SyntaxHighlighter.registerLanguage('javascript', js);
+import CodeSnippet from './code-snippet';
 
 // passion: [
 //   'Optimizing performance',
@@ -37,20 +34,13 @@ export default function CodeBlocks() {
     <>
       {codeBlocks.map((codeStr, i) => (
         <div key={i} className="py-8 px-2 border rounded-md">
-          <SyntaxHighlighter
-            language="javascript"
-            style={atelierLakesideDark}
-            customStyle={{
-              background: "transparent",
-              // padding: "1.5rem",
-              margin: 0,
-              fontSize: "16px",
-            }}
+          <CodeSnippet
+            toggleStyle
             wrapLines={true}
             showLineNumbers={false}
           >
             {codeStr}
-          </SyntaxHighlighter>
+          </CodeSnippet>
         </div>
       ))}
     </>

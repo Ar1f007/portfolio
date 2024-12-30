@@ -31,7 +31,7 @@ const ProjectsPage = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row h-full">
+    <div className="flex flex-col lg:flex-row size-full content-h">
       <ProjectStackSidebar
         getProjects={getProjects}
         clearStacks={clearStacks}

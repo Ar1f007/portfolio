@@ -1,18 +1,22 @@
 import Link from "next/link";
-import { TbBrandDiscord, TbBrandGithub, TbBrandLinkedin, TbMoon } from "react-icons/tb";
+import { TbBrandDiscord, TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 import { routes } from "~/lib/routes";
+import dynamic from "next/dynamic"
+
+const ThemeToggler = dynamic(() => import("../ui/theme-toggler"))
+
 
 const Footer = () => {
   return (
-    <footer className="h-footer-height border-t flex items-stretch bg-background z-20">
+    <footer className="h-footer-height border-t flex items-stretch z-20">
       <div className="flex">
-        <span className="text-muted border-r pr-4 items-center pl-4 hidden sm:flex">
+        <span className="text-primary border-r pr-4 items-center pl-4 hidden sm:flex">
           find me in:
         </span>
         <div className="flex items-stretch">
           <Link
             href={routes.linkedIn.title}
-            className="text-muted hover:text-foreground px-4 border-r flex items-center justify-center"
+            className="text-primary hover:text-foreground px-4 border-r flex items-center justify-center"
             aria-label="LinkedIn"
             title="LinkedIn"
             target="_blank"
@@ -23,7 +27,7 @@ const Footer = () => {
 
           <Link
             href={routes.github.path}
-            className="ml-auto text-muted hover:text-foreground px-4 flex items-center justify-center gap-1 border-r"
+            className="ml-auto text-primary hover:text-foreground px-4 flex items-center justify-center gap-1 border-r"
             aria-label="GitHub"
             title="github"
             target="_blank"
@@ -35,7 +39,7 @@ const Footer = () => {
 
           <Link
             href={routes.github.path}
-            className="ml-auto text-muted hover:text-foreground px-4 flex items-center justify-center gap-1 border-r"
+            className="ml-auto text-primary hover:text-foreground px-4 flex items-center justify-center gap-1 border-r"
             aria-label="Discord"
             title="discord"
             target="_blank"
@@ -46,9 +50,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <button className="ml-auto px-4 border-l text-muted hover:text-foreground">
-        <TbMoon className="text-2xl" />
-      </button>
+      <ThemeToggler />
     </footer>
   );
 };

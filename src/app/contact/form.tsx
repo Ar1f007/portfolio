@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { send } from '@emailjs/browser';
-import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-SyntaxHighlighter.registerLanguage('javascript', js);
+import { useState } from "react";
+import { Loader2Icon } from "lucide-react";
 
 import {
   Form,
@@ -15,14 +15,11 @@ import {
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { contactFormSchema, type ContactFormValues } from "./validation";
-
-import { atelierLakesideDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { useState } from "react";
 import { useToast } from "~/hooks/use-toast";
 import { cn } from "~/lib/utils";
-import { Loader2Icon } from "lucide-react";
 import { ScrollArea, ScrollBar } from "~/components/ui/scroll-area";
+import CodeSnippet from "~/components/ui/code-snippet";
+
 
 const ContactForm = () => {
 
@@ -97,25 +94,25 @@ const ContactForm = () => {
   })`;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 size-full body-h">
+    <div className="grid grid-cols-1 lg:grid-cols-2 w-full content-h overflow-y-auto">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full max-w-[500px] mx-auto space-y-6 py-4 lg:py-8 px-4"
+          className="flex-1 w-full max-w-[500px] mx-auto space-y-6 py-4 lg:py-8 px-4"
         >
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-muted">_name:</FormLabel>
+                <FormLabel className="text-primary">_name:</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
-                    className="bg-transparent border-[#1A365D] focus-visible:ring-[#2D4A77] focus-visible:ring-1 focus-visible:border-[#2D4A77] text-gray-300"
+                    className="bg-transparent border-gray-400 dark:border-[#1A365D] focus-visible:ring-[#2D4A77] focus-visible:ring-1 focus-visible:border-[#2D4A77] dark:text-gray-300"
                   />
                 </FormControl>
-                <FormMessage className="text-red-400" />
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -125,15 +122,15 @@ const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-muted">_email:</FormLabel>
+                <FormLabel className="text-primary">_email:</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
                     type="email"
-                    className="bg-transparent border-[#1A365D] focus-visible:ring-[#2D4A77] focus-visible:ring-1 focus-visible:border-[#2D4A77] text-gray-300"
+                    className="bg-transparent border-gray-400 dark:border-[#1A365D] focus-visible:ring-[#2D4A77] focus-visible:ring-1 focus-visible:border-[#2D4A77] dark:text-gray-300"
                   />
                 </FormControl>
-                <FormMessage className="text-red-400" />
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -143,22 +140,22 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-muted">_message:</FormLabel>
+                <FormLabel className="text-primary">_message:</FormLabel>
                 <FormControl>
                   <Textarea
                     {...field}
                     rows={6}
-                    className="bg-transparent border-[#1A365D] focus-visible:ring-[#2D4A77] focus-visible:ring-1 focus-visible:border-[#2D4A77] text-gray-300 resize-none"
+                    className="bg-transparent border-gray-400 dark:border-[#1A365D] focus-visible:ring-[#2D4A77] focus-visible:ring-1 focus-visible:border-[#2D4A77] dark:text-gray-300 resize-none"
                   />
                 </FormControl>
-                <FormMessage className="text-red-400" />
+                <FormMessage />
               </FormItem>
             )}
           />
 
           <button
             type="submit"
-            className={cn("submit-btn text-sm lg:text-lg gap-1.5 bg-[#1c2b3a] rounded-md text-foreground px-4 py-2 opacity-80 hover:bg-[#263b50] hover:opacity-100 transition-all", {
+            className={cn("submit-btn text-sm lg:text-lg gap-1.5 border border-gray-400 dark:border-[#1A365D] dark:bg-[#1c2b3a] rounded-md px-4 py-2 opacity-80 light:hover:opacity-50 dark:hover:bg-[#263b50] hover:opacity-100 transition-all", {
               "loading": loading
             })}
             disabled={loading}
@@ -171,24 +168,22 @@ const ContactForm = () => {
         </form>
       </Form>
 
-
-      <div className="border-l py-4 lg:py-8 px-2 lg:px-8">
+      <div className="flex-1 border-l py-4 lg:py-8 px-2 lg:px-8">
         <ScrollArea className="w-full whitespace-nowrap rounded-md border">
-
-          <SyntaxHighlighter
-            language="javascript"
-            style={atelierLakesideDark}
+          <CodeSnippet
+            toggleStyle
             customStyle={{
-              background: "transparent",
               wordWrap: "break-word",
+              background: "transparent",
             }}
           >
             {string}
-          </SyntaxHighlighter>
+          </CodeSnippet>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </div>
-    </div >
+    </div>
+
   )
 }
 export default ContactForm

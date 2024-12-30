@@ -31,7 +31,7 @@ export const ProjectCard: FC<ProjectProps> = (props) => {
         </div>
 
         <div className="px-2 md:p-6">
-          <p className="text-muted mb-3 text-sm lg:text-lg leading-relaxed">{briefDesc}</p>
+          <p className="text-foreground mb-3 text-sm lg:text-lg leading-relaxed">{briefDesc}</p>
 
           <ul className="flex gap-2 list-none mb-4 lg:mb-8">
             {stack.map((item, i) => (
@@ -45,19 +45,23 @@ export const ProjectCard: FC<ProjectProps> = (props) => {
               href={previewUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center text-sm lg:text-lg gap-1.5 bg-[#1c2b3a] rounded-md text-foreground px-2 lg:px-4 py-2 opacity-80 hover:bg-[#263b50] hover:opacity-100 transition-all"
+              className="flex items-center text-sm lg:text-lg gap-1.5 bg-foreground text-background dark:bg-[#1c2b3a] rounded-md dark:text-foreground px-2 lg:px-4 py-2 opacity-80 dark:hover:bg-[#263b50] hover:opacity-100 transition-all"
             >
               <ExternalLink /> Preview
             </Link>
 
-            <Link
-              href={`/projects/${detailsUrl}`}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center text-sm lg:text-lg gap-1.5 border border-[#1c2b3a] rounded-md text-foreground px-2 lg:px-4 py-2 opacity-80 hover:bg-[#263b50] hover:opacity-100 transition-all"
-            >
-              <Info /> Details
-            </Link>
+            {
+              !!detailsUrl.length && (
+                <Link
+                  href={`/projects/${detailsUrl}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center text-sm lg:text-lg gap-1.5 border border-[#1c2b3a] rounded-md text-foreground px-2 lg:px-4 py-2 opacity-80 dark:hover:bg-[#263b50] hover:opacity-100 transition-all"
+                >
+                  <Info /> Details
+                </Link>
+              )
+            }
           </div>
         </div>
       </div>
