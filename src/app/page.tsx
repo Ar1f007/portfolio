@@ -1,101 +1,66 @@
-import Image from "next/image";
+import { ChevronRightIcon } from "lucide-react";
+import Link from "next/link";
+import CodeBlocks from "~/components/ui/code-blocks";
+import { routes } from "~/lib/routes";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <section className="p-4 grid grid-cols-6 relative body-h">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Placeholder */}
+      <div className="hidden lg:block md:col-span-1" />
+
+      {/* Right Col */}
+      <div className="col-span-6 md:col-span-6 xl:col-span-5">
+
+        {/* Main */}
+        <div className="grid md:grid-cols-9 h-full">
+
+          {/* Left */}
+          <div className="md:col-span-4 flex flex-col justify-around md:justify-center">
+            <div>
+              <h1 className="leading-loose tracking-tight">
+                <span className="text-lg block md:text-xl md:mb-2">Hi, I am</span>
+                <span className="text-4xl md:text-6xl">Ariful Hoque</span>
+              </h1>
+
+              <p className="flex text-[var(--teal-light)] text-lg md:text-2xl -ml-1 mt-2 md:mt-4">
+                <ChevronRightIcon className="!size-7" />
+                Frontend Developer
+              </p>
+            </div>
+            <h2 className="flex flex-col gap-1 md:mt-12 text-sm md:text-lg">
+              <span className="text-muted">&#47;&#47; find my profile on Github:</span>
+              <span className="flex flex-wrap gap-x-1">
+                <span className="text-[#4d5bce]">const</span>
+                <span className="text-[var(--teal-light)]">GITHUB_LINK</span>
+                <span>=</span>
+
+                <span>
+                  <span className="text-[#e99287] ">&#10077;</span>
+                  <Link
+                    href={routes.github.path}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#e99287] break-all hover:underline hover:underline-offset-4"
+                  >
+                    {routes.github.path}
+                  </Link>
+                  <span className="text-[#e99287] ">&#10078;</span>
+                </span>
+              </span>
+            </h2>
+
+          </div>
+
+          {/* Right */}
+          <div className="hidden md:col-span-5 md:flex md:flex-col justify-center gap-4 max-w-[720px] relative">
+            <CodeBlocks />
+            <div className="green" />
+            <div className="blue" />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </section>
   );
 }
