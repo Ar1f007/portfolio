@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { send } from '@emailjs/browser';
+import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
+SyntaxHighlighter.registerLanguage('javascript', js);
 
 import {
   Form,
