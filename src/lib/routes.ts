@@ -22,7 +22,7 @@ export const routes = {
 
   resume: {
     title: "_resume",
-    path: "/resume"
+    path: "https://drive.google.com/file/d/1vAic_WZ-LwpG9f8qhBsajBvY6k-6RZaL/view?usp=sharing"
   },
 
   linkedIn: {

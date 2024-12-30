@@ -1,9 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Layout from "~/components/layout/app-layout";
 import { Toaster } from "~/components/ui/toaster";
 import { ThemeProvider } from "~/components/theme-provider";
+
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'hsl(0, 0%, 100%)' },
+    { media: '(prefers-color-scheme: dark)', color: 'hsl(206.84, 95%, 7.84%)' },
+  ]
+}
 
 export const metadata: Metadata = {
   title: "Ariful Hoque Al Amin | Portfolio",
@@ -27,9 +35,10 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          defaultTheme="system"
+          // enableSystem
           disableTransitionOnChange
+        // forcedTheme="dark"
         >
           <Layout>
             {children}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import CodeBlocks from "~/components/ui/code-blocks";
 import { routes } from "~/lib/routes";
 
+
 export default function Home() {
   return (
     <section className="p-4 grid grid-cols-6 relative content-h">

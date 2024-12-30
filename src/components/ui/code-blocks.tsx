@@ -1,5 +1,7 @@
-import CodeSnippet from './code-snippet';
+"use client"
 
+import { useTheme } from 'next-themes';
+import CodeSnippet from './code-snippet';
 // passion: [
 //   'Optimizing performance',
 //   'Creating responsive designs',
@@ -30,6 +32,9 @@ const codeBlocks = [
 
 
 export default function CodeBlocks() {
+
+  const { theme } = useTheme();
+
   return (
     <>
       {codeBlocks.map((codeStr, i) => (
@@ -38,6 +43,7 @@ export default function CodeBlocks() {
             toggleStyle
             wrapLines={true}
             showLineNumbers={false}
+            theme={theme}
           >
             {codeStr}
           </CodeSnippet>

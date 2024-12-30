@@ -1,9 +1,11 @@
+"use client"
+
 import Link from "next/link";
+import dynamic from "next/dynamic"
 import { TbBrandDiscord, TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 import { routes } from "~/lib/routes";
-import dynamic from "next/dynamic"
 
-const ThemeToggler = dynamic(() => import("../ui/theme-toggler"))
+const ThemeToggler = dynamic(() => import("../ui/theme-toggler"), { ssr: false })
 
 
 const Footer = () => {
@@ -50,6 +52,8 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+
+
       <ThemeToggler />
     </footer>
   );

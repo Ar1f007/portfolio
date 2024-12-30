@@ -5,16 +5,15 @@ import { xcode as defaultStyle, atelierLakesideDark as darkStyle } from 'react-s
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
 import { ComponentProps, FC } from 'react';
-import { useTheme } from 'next-themes';
+
 SyntaxHighlighter.registerLanguage('javascript', js);
 
 interface CodeSnippetProps extends ComponentProps<typeof SyntaxHighlighter> {
   toggleStyle?: boolean;
+  theme?: string;
 }
 
-const CodeSnippet: FC<CodeSnippetProps> = ({ toggleStyle = false, children, ...rest }) => {
-
-  const { theme } = useTheme();
+const CodeSnippet: FC<CodeSnippetProps> = ({ theme = "dark", toggleStyle = false, children, ...rest }) => {
 
   return (
     <SyntaxHighlighter
