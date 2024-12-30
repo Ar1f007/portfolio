@@ -11,7 +11,7 @@ export interface ProjectStack {
 }
 
 export const js = {
-  icon: <DiJavascript1 color="#F7DF1E" />,
+  icon: <DiJavascript1 color="#F7DF1E" size={20} />,
   title: 'js',
   sort: 0
 };

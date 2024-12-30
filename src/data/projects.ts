@@ -42,7 +42,7 @@ export const projectList: Project[] = [
     briefDesc: 'An inventory management website where user can manage products, view details, update stock and do lot more',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656271493/Portfolio/zenFitness_s7dck1.png',
     previewUrl: 'https://zenfitness-46154.web.app/',
-    detailsUrl: "zenFitness",
+    detailsUrl: "https://github.com/Ar1f007/zenFitness-client?tab=readme-ov-file#zen-fitness",
     sort: 0,
   },
 
@@ -53,7 +53,7 @@ export const projectList: Project[] = [
     briefDesc: 'An API project about finding phone by searching and reading details',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656452286/Portfolio/phoneFinder_iemce6.png',
     previewUrl: 'https://phone-finder-007.netlify.app/',
-    detailsUrl: "phoneFinder",
+    detailsUrl: "https://github.com/Ar1f007/phone-finder?tab=readme-ov-file#phone-finder",
     sort: 0,
   },
 
@@ -64,7 +64,7 @@ export const projectList: Project[] = [
     briefDesc: 'List of frontend mentor challenges I have solved.',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656453956/Portfolio/Frontend-Mentor-Challenges_gamqh7.png',
     previewUrl: 'https://frontend-mentor-challanges.netlify.app/',
-    detailsUrl: "frontendMentor",
+    detailsUrl: "https://github.com/Ar1f007/frontend-mentor-challenges?tab=readme-ov-file#frontend-mentor-challenges",
     sort: 0,
   },
 
@@ -75,7 +75,7 @@ export const projectList: Project[] = [
     briefDesc: 'Calculate the correct tip and total cost of the bill per person',
     img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Challenges/hxkpctp6cd1meeytfdl2.jpg',
     previewUrl: 'https://fmentor-tip-calculator-app.vercel.app/',
-    detailsUrl: "splitter",
+    detailsUrl: "",
     sort: 0,
   },
 
@@ -86,7 +86,7 @@ export const projectList: Project[] = [
     briefDesc: 'A landing page made using flexbox and scss',
     img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Challenges/mhwyzwfgaii3cw5s6jco.jpg',
     previewUrl: 'https://fmentor-fylo-dark-theme-landing-page.vercel.app/',
-    detailsUrl: "fyloLandingPage",
+    detailsUrl: "",
     sort: 0,
   },
 
@@ -97,7 +97,7 @@ export const projectList: Project[] = [
     briefDesc: 'A figma to html conversion design',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656456024/Portfolio/Eurasia_iqx0wd.png',
     previewUrl: 'https://eurasia.netlify.app/',
-    detailsUrl: "eurasia",
+    detailsUrl: "",
     sort: 0,
   },
 
@@ -108,7 +108,7 @@ export const projectList: Project[] = [
     briefDesc: 'Photography as a service website. Practice project for implementing protected routing and authentication',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656456328/Portfolio/Unlens_ofg2a6.png',
     previewUrl: 'https://unlens.web.app/',
-    detailsUrl: "unLens",
+    detailsUrl: "https://github.com/Ar1f007/unLens?tab=readme-ov-file#unlens",
     sort: 0,
   },
 
@@ -119,7 +119,7 @@ export const projectList: Project[] = [
     briefDesc: 'JS practice project about income/expense calculation focusing on DOM manipulation, error handling.',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656483781/Portfolio/BudgetCheck_zoqhta.png',
     previewUrl: 'https://budget-check.netlify.app/',
-    detailsUrl: "budgetCheck",
+    detailsUrl: "https://github.com/Ar1f007/Budget-checker?tab=readme-ov-file#money-master-assignment",
     sort: 0,
   },
 
@@ -130,7 +130,7 @@ export const projectList: Project[] = [
     briefDesc: 'Landing page for event management organization',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656484151/Portfolio/plantastic-event-agency_qzv5du.png',
     previewUrl: 'https://plantastic-event-agency.netlify.app/',
-    detailsUrl: "plantasticEvent",
+    detailsUrl: "https://github.com/Ar1f007/plantastic-event-agency?tab=readme-ov-file#convention-center-assignment",
     sort: 0,
   },
 
@@ -141,7 +141,7 @@ export const projectList: Project[] = [
     briefDesc: 'A product landing page',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1656484285/Portfolio/influencer-gear_ynaim5.png',
     previewUrl: 'https://ar1f007.github.io/influencer-gear-landing-page/',
-    detailsUrl: "influencerProducts",
+    detailsUrl: "",
     sort: 0,
   },
 ];
