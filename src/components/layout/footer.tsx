@@ -40,7 +40,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            href={routes.github.path}
+            href={routes.discord.path}
             className="ml-auto text-primary hover:text-foreground px-4 flex items-center justify-center gap-1 border-r"
             aria-label="Discord"
             title="discord"

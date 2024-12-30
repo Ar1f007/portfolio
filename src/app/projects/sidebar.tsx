@@ -48,7 +48,7 @@ export const ProjectStackSidebar: FC<ProjectStackSidebarProps> = ({ clearStacks,
 
       <ScrollArea className={cn("md:max-h-none md:sidebar-h",
         {
-          "border-b lg:border-none h-[200px] w-full": showList
+          "border-b lg:border-none h-[100px] w-full": showList
         }
       )}>
         {showList && (
