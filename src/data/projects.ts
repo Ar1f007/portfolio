@@ -1,4 +1,4 @@
-import { css, scss, react, js, firebase, tailwindcss, nodejs, bootstrap, nextjs, nextui, typescript, shadcn, mongodb, ProjectStack } from './stack';
+import { css, scss, react, js, firebase, tailwindcss, nodejs, bootstrap, nextjs, nextui, typescript, shadcn, mongodb, ProjectStack, clerk } from './stack';
 
 export interface Project {
   id: string;
@@ -18,7 +18,8 @@ export const projectList: Project[] = [
     projectTitle: 'garichai',
     stack: [typescript, nextjs, nextui, shadcn, nodejs, mongodb],
     briefDesc: 'A platform for discovering and purchasing cars with curated selections',
-    img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1728937920/Gari-Chai-10-15-2024_02_28_AM_1_fbwgxb.png',
+    // img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1728937920/Gari-Chai-10-15-2024_02_28_AM_1_fbwgxb.png',
+    img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1735626134/Portfolio/garichai_sratyb.png',
     previewUrl: 'https://www.garichaibd.com',
     detailsUrl: "garichai",
     sort: 0,
@@ -29,9 +30,21 @@ export const projectList: Project[] = [
     projectTitle: 'xenFurniture',
     stack: [react, tailwindcss, nodejs, firebase],
     briefDesc: 'A full-stack B2B manufacturer website to purchase furnitures',
-    img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1728939278/xenFurniture-10-15-2024_02_53_AM-min.png',
+    // img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1728939278/xenFurniture-10-15-2024_02_53_AM-min.png',
+    img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1735626824/Portfolio/xen-furniture_vcjdxt.png',
     previewUrl: 'https://xen-furni.vercel.app/',
-    detailsUrl: "xenFurniture",
+    detailsUrl: "",
+    sort: 0,
+  },
+
+  {
+    id: 'urban_nest_1',
+    projectTitle: 'urban_nest',
+    stack: [typescript, nextjs, shadcn, clerk, nodejs, mongodb],
+    briefDesc: 'Discover, list, and bid on real estate. Connect with buyers and sellers effortlessly',
+    img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1735626279/Portfolio/urban-nest_asxagm.png',
+    previewUrl: 'https://www.garichaibd.com',
+    detailsUrl: "",
     sort: 0,
   },
 

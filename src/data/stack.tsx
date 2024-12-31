@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { DiReact, DiJavascript1, DiCss3, DiSass } from 'react-icons/di';
 import { FaNodeJs } from 'react-icons/fa';
 import { RiNextjsFill } from "react-icons/ri";
-import { SiFirebase, SiTailwindcss, SiBootstrap, SiNextui, SiTypescript, SiShadcnui, SiMongodb } from "react-icons/si";
+import { SiFirebase, SiTailwindcss, SiBootstrap, SiNextui, SiTypescript, SiShadcnui, SiMongodb, SiClerk } from "react-icons/si";
 
 export interface ProjectStack {
   icon: ReactNode;
@@ -28,6 +28,7 @@ export const nextui = { icon: <SiNextui color="#0072F5" size={20} />, title: 'ne
 export const typescript = { icon: <SiTypescript color="#007ACC" size={20} />, title: 'typescript', sort: 0 }
 export const shadcn = { icon: <SiShadcnui className='text-foreground' size={20} />, title: 'shadcnui', sort: 0 }
 export const mongodb = { icon: <SiMongodb color="#4DB33D" size={20} />, title: 'mongodb', sort: 0 };
+export const clerk = { icon: <SiClerk size={20} color="rgb(108 71 255)" />, title: 'clerk', sort: 0 }
 
 
-export const stackList: ProjectStack[] = [typescript, react, nextjs, nodejs, mongodb, tailwindcss, firebase, nextui, shadcn, scss, css, js, bootstrap];
+export const stackList: ProjectStack[] = [typescript, react, nextjs, nodejs, mongodb, clerk, tailwindcss, firebase, nextui, shadcn, scss, css, js, bootstrap];
