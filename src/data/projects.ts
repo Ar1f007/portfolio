@@ -43,7 +43,7 @@ export const projectList: Project[] = [
     stack: [typescript, nextjs, shadcn, clerk, nodejs, mongodb],
     briefDesc: 'Discover, list, and bid on real estate. Connect with buyers and sellers effortlessly',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1735626279/Portfolio/urban-nest_asxagm.png',
-    previewUrl: 'https://www.garichaibd.com',
+    previewUrl: 'https://urban-nest-dusky.vercel.app/',
     detailsUrl: "",
     sort: 0,
   },
