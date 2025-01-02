@@ -10,7 +10,7 @@ const string = ` /**
   * Sylhet Metropolitan University, Bangladesh
   * from (2018 - 2022) 
   * Department: CSE
-  * CGPA: 3.61  
+  * CGPA: 3.60 
   */
 
   /** 

@@ -37,7 +37,7 @@ export const Projects: FC<ProjectsProps> = (props) => {
       </ul>
 
 
-      <ul className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 p-4 lg:p-8 xl:p-12">
+      <ul className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-4 lg:p-8 xl:p-12">
         {
           projects.map((project, idx) => (
             <li key={project.id}>
