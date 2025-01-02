@@ -1,6 +1,5 @@
 "use client"
 
-import { useTheme } from 'next-themes';
 import CodeSnippet from './code-snippet';
 // passion: [
 //   'Optimizing performance',
@@ -33,17 +32,13 @@ const codeBlocks = [
 
 export default function CodeBlocks() {
 
-  const { theme } = useTheme();
-
   return (
     <>
       {codeBlocks.map((codeStr, i) => (
         <div key={i} className="py-8 px-2 border rounded-md">
           <CodeSnippet
-            toggleStyle
             wrapLines={true}
             showLineNumbers={false}
-            theme={theme}
           >
             {codeStr}
           </CodeSnippet>

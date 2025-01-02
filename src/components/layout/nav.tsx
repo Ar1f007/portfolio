@@ -48,8 +48,8 @@ const Navbar = () => {
             ))
           }
 
-          <li className={cn("ml-auto border-l", linkClasses)}>
-            <Link href={routes.resume.path}>
+          <li className="ml-auto border-l">
+            <Link href={routes.resume.path} className={linkClasses} target="_blank" rel="noreferrer">
               {routes.resume.title}
             </Link>
           </li>
@@ -98,7 +98,13 @@ const Navbar = () => {
           }
 
           <li>
-            <Link href={routes.resume.path} className={cn(mobileLinkClasses, "border-b py-4")}>
+            <Link
+              href={routes.resume.path}
+              className={cn(mobileLinkClasses, "border-b py-4")}
+              onClick={() => setOpenMenu(false)}
+              target="_blank"
+              rel="noreferrer"
+            >
               {routes.resume.title}
             </Link>
           </li>

@@ -171,7 +171,6 @@ const ContactForm = () => {
       <div className="flex-1 border-l py-4 lg:py-8 px-2 lg:px-8">
         <ScrollArea className="w-full whitespace-nowrap rounded-md border">
           <CodeSnippet
-            toggleStyle
             customStyle={{
               wordWrap: "break-word",
               background: "transparent",
