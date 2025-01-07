@@ -21,7 +21,7 @@ export const projectList: Project[] = [
     // img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1728937920/Gari-Chai-10-15-2024_02_28_AM_1_fbwgxb.png',
     img: 'https://res.cloudinary.com/dv3wezqsc/image/upload/v1735626134/Portfolio/garichai_sratyb.png',
     previewUrl: 'https://www.garichaibd.com',
-    detailsUrl: "garichai",
+    detailsUrl: "https://github.com/Ar1f007/gari-chai?tab=readme-ov-file#gari-chai",
     sort: 0,
   },
 
